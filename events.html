@@ -1,0 +1,294 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学校行事 | 川中島中学校ポータルサイト</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI","Yu Gothic UI","Meiryo",sans-serif;
+}
+
+body{
+    background:#eef3f8;
+}
+
+.app{
+    display:grid;
+    grid-template-columns:240px 1fr;
+    min-height:100vh;
+}
+
+/* サイドバー */
+
+.sidebar{
+    background:linear-gradient(180deg,#2563eb,#1d4ed8);
+    color:white;
+    padding:25px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    line-height:1.5;
+    margin-bottom:35px;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:10px;
+}
+
+.menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:14px 16px;
+    border-radius:12px;
+    transition:.2s;
+}
+
+.menu a:hover,
+.menu a.active{
+    background:rgba(255,255,255,.18);
+}
+
+/* メイン */
+
+.main{
+    padding:30px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.page-title{
+    font-size:32px;
+    color:#2563eb;
+}
+
+.user{
+    background:white;
+    padding:12px 18px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.month-card{
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.month-card h2{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.event{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.event:last-child{
+    border-bottom:none;
+}
+
+.date{
+    font-weight:bold;
+    color:#2563eb;
+    min-width:80px;
+}
+
+.name{
+    flex:1;
+    padding-left:20px;
+}
+
+.badge{
+    background:#2563eb;
+    color:white;
+    padding:5px 10px;
+    border-radius:999px;
+    font-size:12px;
+}
+
+@media(max-width:700px){
+
+.app{
+grid-template-columns:1fr;
+}
+
+.sidebar{
+display:none;
+}
+
+.header{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.event{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- サイドバー -->
+
+<div class="sidebar">
+
+<div class="logo">
+🏫<br>
+川中島中学校
+</div>
+
+<ul class="menu">
+<li><a href="index.html">🏠 ホーム</a></li>
+<li><a href="notice.html">📢 お知らせ</a></li>
+<li><a class="active" href="events.html">📅 学校行事</a></li>
+<li><a href="profile.html">👤 マイページ</a></li>
+<li><a href="settings.html">⚙️ 設定</a></li>
+</ul>
+
+</div>
+
+<!-- メイン -->
+
+<div class="main">
+
+<div class="header">
+
+<h1 class="page-title">📅 学校行事</h1>
+
+<div class="user">
+🔔 通知　
+👤 生徒
+</div>
+
+</div>
+
+<div class="month-card">
+
+<h2>7月の学校行事</h2>
+
+<div class="event">
+<div class="date">7/22</div>
+<div class="name">終業式</div>
+<div class="badge">重要</div>
+</div>
+
+<div class="event">
+<div class="date">7/23</div>
+<div class="name">夏季休業開始</div>
+<div class="badge">予定</div>
+</div>
+
+<div class="event">
+<div class="date">7/30</div>
+<div class="name">三者懇談</div>
+<div class="badge">予定</div>
+</div>
+
+</div>
+
+<div class="month-card">
+
+<h2>8月の学校行事</h2>
+
+<div class="event">
+    <div class="date">8/20</div>
+    <div class="name">登校日</div>
+    <div class="badge">予定</div>
+</div>
+
+<div class="event">
+    <div class="date">8/28</div>
+    <div class="name">始業式</div>
+    <div class="badge">重要</div>
+</div>
+
+<div class="event">
+    <div class="date">8/29</div>
+    <div class="name">避難訓練</div>
+    <div class="badge">予定</div>
+</div>
+
+</div>
+
+<div class="month-card">
+
+<h2>9月の学校行事</h2>
+
+<div class="event">
+    <div class="date">9/5</div>
+    <div class="name">体育祭</div>
+    <div class="badge">重要</div>
+</div>
+
+<div class="event">
+    <div class="date">9/12</div>
+    <div class="name">生徒会専門委員会</div>
+    <div class="badge">予定</div>
+</div>
+
+<div class="event">
+    <div class="date">9/18</div>
+    <div class="name">中間テスト</div>
+    <div class="badge">重要</div>
+</div>
+
+<div class="event">
+    <div class="date">9/19</div>
+    <div class="name">中間テスト</div>
+    <div class="badge">重要</div>
+</div>
+
+</div>
+
+<div class="month-card">
+
+<h2>お知らせ</h2>
+
+<p style="line-height:1.9;">
+・行事予定は変更になる場合があります。<br>
+・変更があった場合は「📢 お知らせ」に掲載します。<br>
+・詳細は各学年から配布される案内をご確認ください。
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
+```
