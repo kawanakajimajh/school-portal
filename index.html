@@ -1,264 +1,359 @@
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>川中島中学校ポータルサイト</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:"Segoe UI","Yu Gothic UI","Meiryo",sans-serif;
+    font-family:"Yu Gothic UI","Segoe UI",sans-serif;
 }
 
 body{
     background:#eef3f8;
 }
 
-/* ===== レイアウト ===== */
-
-.app{
+.container{
     display:grid;
     grid-template-columns:240px 1fr 300px;
-    height:100vh;
+    min-height:100vh;
 }
 
-/* ===== サイドバー ===== */
+/* サイドバー */
 
 .sidebar{
+
     background:linear-gradient(180deg,#2563eb,#1d4ed8);
     color:white;
     padding:25px;
+
 }
 
 .logo{
+
     font-size:24px;
     font-weight:bold;
-    margin-bottom:35px;
+    margin-bottom:40px;
     line-height:1.5;
+
 }
 
 .menu{
+
     list-style:none;
+
 }
 
 .menu li{
-    padding:14px 16px;
+
     margin-bottom:10px;
+
+}
+
+.menu a{
+
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:14px 18px;
     border-radius:12px;
-    cursor:pointer;
     transition:.2s;
+
 }
 
-.menu li:hover{
+.menu a:hover{
+
     background:rgba(255,255,255,.15);
+
 }
 
-/* ===== メイン ===== */
+.menu a.active{
+
+    background:rgba(255,255,255,.22);
+
+}
+
+/* メイン */
 
 .main{
-    padding:25px;
-    overflow-y:auto;
+
+    padding:30px;
+
 }
 
 .header{
+
     display:flex;
     justify-content:space-between;
     align-items:center;
     margin-bottom:25px;
+
 }
 
 .clock{
+
     font-size:34px;
     font-weight:bold;
     color:#2563eb;
+
 }
 
 .date{
+
     color:#666;
     margin-top:5px;
+
 }
 
 .user{
+
     background:white;
     padding:12px 18px;
     border-radius:12px;
     box-shadow:0 8px 20px rgba(0,0,0,.08);
+
 }
 
 .banner{
+
     background:linear-gradient(135deg,#3b82f6,#2563eb);
     color:white;
-    padding:30px;
     border-radius:18px;
+    padding:30px;
     margin-bottom:25px;
-    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
 }
 
 .banner h2{
-    margin-bottom:8px;
-}
 
-.welcome{
-    background:white;
-    border-radius:18px;
-    padding:30px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
+    margin-bottom:10px;
 
-.welcome h3{
-    color:#2563eb;
-    margin-bottom:15px;
-}
-
-.welcome p{
-    line-height:1.8;
-    color:#444;
-}
-
-/* ===== 右側 ===== */
-
-.right{
-    padding:25px;
-    overflow-y:auto;
 }
 
 .card{
+
     background:white;
     border-radius:18px;
-    padding:20px;
+    padding:25px;
     margin-bottom:20px;
     box-shadow:0 8px 20px rgba(0,0,0,.08);
+
 }
 
 .card h3{
+
     color:#2563eb;
     margin-bottom:15px;
+
 }
 
-.card ul{
-    padding-left:20px;
+.notice-item{
+
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+
 }
 
-.card li{
-    margin-bottom:10px;
+.notice-item:last-child{
+
+    border-bottom:none;
+
 }
 
-/* ===== スマホ対応 ===== */
+/* 右側 */
+
+.right{
+
+    padding:25px;
+
+}
+
+.weather{
+
+    text-align:center;
+
+}
+
+.weather .icon{
+
+    font-size:60px;
+
+}
 
 @media(max-width:1000px){
 
-.app{
+.container{
+
 grid-template-columns:220px 1fr;
+
 }
 
 .right{
+
 display:none;
+
 }
 
 }
 
 @media(max-width:700px){
 
-.app{
+.container{
+
 grid-template-columns:1fr;
+
 }
 
 .sidebar{
+
 display:none;
+
 }
 
 }
+
 </style>
+
 </head>
 
 <body>
 
-<div class="app">
+<div class="container">
 
-<!-- サイドバー -->
 <div class="sidebar">
 
 <div class="logo">
+
 🏫<br>
 川中島中学校
+
 </div>
 
 <ul class="menu">
-<li><a href="index.html">🏠 ホーム</a></li>
+
+<li><a class="active" href="index.html">🏠 ホーム</a></li>
+
 <li><a href="notice.html">📢 お知らせ</a></li>
-<li>📂 配布物</li>
-<li>📅 学校行事</li>
-<li>👤 マイページ</li>
-<li>⚙️ 設定</li>
+
+<li><a href="events.html">📅 学校行事</a></li>
+
+<li><a href="settings.html">⚙️ 設定</a></li>
+
 </ul>
 
 </div>
 
-<!-- メイン -->
 <div class="main">
 
 <div class="header">
 
 <div>
+
 <div id="clock" class="clock"></div>
+
 <div id="date" class="date"></div>
+
 </div>
 
 <div class="user">
-🔔 通知　
-👤 生徒
+
+🔔 通知
+
 </div>
 
 </div>
 
 <div class="banner">
-<h2>川中島中学校ポータルサイトへようこそ！</h2>
-<p>学校からのお知らせや配布物、学校行事を確認できます。</p>
-</div>
 
-<div class="welcome">
-
-<h3>🏫 ホーム</h3>
+<h2>川中島中学校ポータルへようこそ！</h2>
 
 <p>
-このポータルサイトでは、学校からのお知らせや配布物、
-学校行事などを確認できます。<br><br>
 
-左側のメニューから各ページへ移動してください。
+学校からのお知らせや学校行事を確認できます。
+
 </p>
 
 </div>
 
+<div class="card">
+
+<h3>📢 最新のお知らせ</h3>
+
+<div class="notice-item">
+
+体育祭のお知らせ
+
 </div>
 
-<!-- 右側 -->
+<div class="notice-item">
+
+夏休みについて
+
+</div>
+
+<div class="notice-item">
+
+健康診断のお知らせ
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>📅 近日中の学校行事</h3>
+```html
+<div class="notice-item">
+7月22日　終業式
+</div>
+
+<div class="notice-item">
+7月23日　夏季休業開始
+</div>
+
+<div class="notice-item">
+8月20日　登校日
+</div>
+
+</div>
+
+</div>
+
 <div class="right">
 
-<div class="card">
-
-<h3>📢 お知らせ</h3>
-
-<ul>
-<li>夏休みのお知らせ</li>
-<li>終業式について</li>
-<li>健康診断のお知らせ</li>
-<li>体育祭の日程変更</li>
-</ul>
-
-</div>
-
-<div class="card">
+<div class="card weather">
 
 <h3>🌤 天気</h3>
 
-<p style="font-size:42px;">☀️</p>
+<div class="icon">
+☀️
+</div>
 
-<p>29℃</p>
+<h2>29℃</h2>
 
 <p>晴れ</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏫 学校からのメッセージ</h3>
+
+<p style="line-height:1.8;">
+
+川中島中学校ポータルへようこそ。<br><br>
+
+このサイトでは学校からのお知らせや
+学校行事を確認できます。
+
+</p>
 
 </div>
 
@@ -290,3 +385,4 @@ setInterval(updateClock,1000);
 
 </body>
 </html>
+```
