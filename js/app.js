@@ -1,30 +1,111 @@
+/* =====================================
+   川中島中学校ポータルサイト
+   app.js
+===================================== */
+
+/* ---------- 時計 ---------- */
+
 function updateClock() {
 
     const now = new Date();
 
     const clock = document.getElementById("clock");
 
-    if(clock){
-
-        clock.textContent = now.toLocaleTimeString("ja-JP");
-
+    if (clock) {
+        clock.textContent = now.toLocaleTimeString("ja-JP", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        });
     }
 
 }
 
-function updateDate(){
+/* ---------- 日付 ---------- */
+
+function updateDate() {
 
     const now = new Date();
 
-    const week=["日","月","火","水","木","金","土"];
+    const week = ["日", "月", "火", "水", "木", "金", "土"];
 
-    const date=document.getElementById("date");
+    const date = document.getElementById("date");
 
-    if(date){
-
+    if (date) {
         date.textContent =
-        `${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日（${week[now.getDay()]}）`;
-
+            `${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日（${week[now.getDay()]}）`;
     }
+
+}
+
+/* ---------- テーマ変更 ---------- */
+
+function setTheme(theme) {
+
+    document.body.classList.remove(
+        "theme-blue",
+        "theme-green",
+        "theme-purple",
+        "theme-orange"
+    );
+
+    document.body.classList.add(theme);
+
+    localStorage.setItem("theme", theme);
+
+}
+
+/* ---------- 保存したテーマを読み込む ---------- */
+
+function loadTheme() {
+
+    const theme = localStorage.getItem("theme") || "theme-blue";
+
+    document.body.classList.add(theme);
+
+}
+
+/* ---------- 初期処理 ---------- */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    loadTheme();
+
+    updateDate();
+    updateClock();
+
+    setInterval(updateClock, 1000);
+
+    const blue = document.getElementById("blueTheme");
+    const green = document.getElementById("greenTheme");
+    const purple = document.getElementById("purpleTheme");
+    const orange = document.getElementById("orangeTheme");
+
+    if (blue) {
+        blue.addEventListener("click", () => setTheme("theme-blue"));
+    }
+
+    if (green) {
+        green.addEventListener("click", () => setTheme("theme-green"));
+    }
+
+    if (purple) {
+        purple.addEventListener("click", () => setTheme("theme-purple"));
+    }
+
+    if (orange) {
+        orange.addEventListener("click", () => setTheme("theme-orange"));
+    }
+
+});
+
+/* ---------- ページ最上部へ ---------- */
+
+function scrollTopPage() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
