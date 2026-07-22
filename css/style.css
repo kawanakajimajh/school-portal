@@ -1,40 +1,28 @@
-/* =====================================
-   川中島中学校ポータルサイト
-   style.css
-===================================== */
+/* ==========================================
+   川中島中学校ポータルサイト Version 3
+========================================== */
 
-/* ---------- テーマカラー ---------- */
-
-:root{
-
-    --main-color:#2563eb;
-    --main-dark:#1d4ed8;
-    --accent:#60a5fa;
-
-    --bg1:#dbeafe;
-    --bg2:#eef3f8;
-    --bg3:#ffffff;
-
-    --glass:rgba(255,255,255,.35);
-
-    --shadow:0 8px 32px rgba(0,0,0,.12);
-
-    --radius:20px;
-
-}
-
-/* ---------- リセット ---------- */
+/* ===== リセット ===== */
 
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:"Yu Gothic UI","Meiryo","Segoe UI",sans-serif;
+}
 
-    font-family:
-    "Yu Gothic UI",
-    "Segoe UI",
-    sans-serif;
+:root{
+
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --background:#eef4ff;
+    --glass:rgba(255,255,255,.45);
+    --border:rgba(255,255,255,.35);
+
+    --shadow:
+    0 8px 30px rgba(0,0,0,.12);
+
+    --radius:20px;
 
 }
 
@@ -42,59 +30,58 @@ body{
 
     background:
     linear-gradient(
-    135deg,
-    var(--bg1),
-    var(--bg2),
-    var(--bg3)
+        135deg,
+        #dbeafe,
+        #eef4ff,
+        #f8fbff
     );
 
     min-height:100vh;
 
+    color:#333;
+
 }
 
-/* ---------- レイアウト ---------- */
+/* ===== レイアウト ===== */
 
 .container{
 
     display:grid;
 
     grid-template-columns:
-
-    250px
-    1fr
-    300px;
+    240px
+    1fr;
 
     min-height:100vh;
 
 }
 
-/* ---------- サイドバー ---------- */
+/* ===== サイドバー ===== */
 
 .sidebar{
 
     background:
-
     linear-gradient(
-    180deg,
-    var(--main-color),
-    var(--main-dark)
+        180deg,
+        var(--primary),
+        var(--primary-dark)
     );
 
     color:white;
 
-    padding:25px;
-
-    backdrop-filter:blur(18px);
+    padding:30px 20px;
 
 }
 
 .logo{
 
+    text-align:center;
+
     font-size:26px;
 
     font-weight:bold;
 
-    line-height:1.5;
+    line-height:1.6;
 
     margin-bottom:40px;
 
@@ -108,7 +95,7 @@ body{
 
 .menu li{
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 
 }
 
@@ -116,11 +103,11 @@ body{
 
     display:block;
 
-    padding:14px 18px;
+    text-decoration:none;
 
     color:white;
 
-    text-decoration:none;
+    padding:15px 18px;
 
     border-radius:14px;
 
@@ -131,8 +118,7 @@ body{
 .menu a:hover{
 
     background:
-
-    rgba(255,255,255,.18);
+    rgba(255,255,255,.15);
 
     transform:translateX(6px);
 
@@ -141,20 +127,19 @@ body{
 .menu a.active{
 
     background:
-
-    rgba(255,255,255,.24);
+    rgba(255,255,255,.25);
 
 }
 
-/* ---------- メイン ---------- */
+/* ===== メイン ===== */
 
 .main{
 
-    padding:30px;
+    padding:35px;
 
 }
 
-/* ---------- ヘッダー ---------- */
+/* ===== ヘッダー ===== */
 
 .header{
 
@@ -168,23 +153,23 @@ body{
 
 }
 
-.clock{
+.header h1{
 
-    font-size:36px;
+    font-size:34px;
 
-    font-weight:bold;
-
-    color:var(--main-color);
+    color:var(--primary);
 
 }
 
-.date{
+.header p{
 
     color:#666;
 
-    margin-top:5px;
+    margin-top:8px;
 
 }
+
+/* ===== 時計 ===== */
 
 .user{
 
@@ -194,112 +179,168 @@ body{
 
     -webkit-backdrop-filter:blur(18px);
 
-    border:
-
-    1px solid
-
-    rgba(255,255,255,.45);
+    border:1px solid var(--border);
 
     border-radius:18px;
 
-    padding:12px 18px;
+    padding:20px;
 
     box-shadow:var(--shadow);
 
-}/* =====================================
-   カードデザイン
-===================================== */
-
-.card{
-
-    background:rgba(255,255,255,.35);
-
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.45);
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-    padding:25px;
-
-    margin-bottom:25px;
-
-    transition:.3s;
+    text-align:center;
 
 }
 
-.card:hover{
+.clock{
 
-    transform:translateY(-6px);
+    font-size:42px;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.18);
+    font-weight:bold;
 
-}
+    color:var(--primary);
 
-.card h2,
-.card h3{
+    font-variant-numeric:tabular-nums;
 
-    color:var(--main-color);
-
-    margin-bottom:18px;
+    letter-spacing:2px;
 
 }
 
-/* =====================================
-   バナー
-===================================== */
+.date{
+
+    margin-top:8px;
+
+    color:#666;
+
+    white-space:nowrap;
+
+}
+
+/* ===== バナー ===== */
 
 .banner{
 
     background:
     linear-gradient(
-    135deg,
-    var(--main-color),
-    var(--main-dark)
+        135deg,
+        var(--primary),
+        var(--primary-dark)
     );
 
     color:white;
 
-    border-radius:var(--radius);
-
     padding:35px;
 
-    margin-bottom:30px;
+    border-radius:24px;
 
     box-shadow:var(--shadow);
+
+    margin-bottom:30px;
 
 }
 
 .banner h2{
 
-    margin-bottom:10px;
-
     font-size:30px;
+
+    margin-bottom:12px;
 
 }
 
 .banner p{
 
-    opacity:.95;
-
     line-height:1.8;
+
+}/* ==========================================
+   コンテンツレイアウト
+========================================== */
+
+.content{
+
+    display:grid;
+
+    grid-template-columns:
+    2fr
+    1fr;
+
+    gap:30px;
+
+    align-items:start;
 
 }
 
-/* =====================================
+.left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ==========================================
+   ガラス風カード
+========================================== */
+
+.card{
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:.25s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.16);
+
+}
+
+.card h2{
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+/* ==========================================
    お知らせ
-===================================== */
+========================================== */
 
 .notice-item{
 
-    padding:15px 0;
+    padding:16px 0;
 
-    border-bottom:1px solid rgba(0,0,0,.08);
-
-    transition:.25s;
+    border-bottom:
+    1px solid rgba(0,0,0,.08);
 
 }
 
@@ -309,9 +350,19 @@ body{
 
 }
 
-.notice-item:hover{
+.notice-item strong{
 
-    padding-left:10px;
+    font-size:17px;
+
+}
+
+.notice-item p{
+
+    margin-top:8px;
+
+    color:#666;
+
+    line-height:1.8;
 
 }
 
@@ -319,35 +370,36 @@ body{
 
     display:inline-block;
 
+    margin-left:10px;
+
     background:#ef4444;
 
     color:white;
+
+    font-size:12px;
 
     padding:4px 10px;
 
     border-radius:999px;
 
-    font-size:12px;
-
-    margin-left:8px;
-
 }
 
-/* =====================================
+/* ==========================================
    学校行事
-===================================== */
+========================================== */
 
 .event{
 
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
 
-    padding:16px 0;
+    gap:18px;
 
-    border-bottom:1px solid rgba(0,0,0,.08);
+    padding:15px 0;
+
+    border-bottom:
+    1px solid rgba(0,0,0,.08);
 
 }
 
@@ -359,11 +411,11 @@ body{
 
 .event-date{
 
+    min-width:70px;
+
     font-weight:bold;
 
-    color:var(--main-color);
-
-    width:90px;
+    color:var(--primary);
 
 }
 
@@ -375,11 +427,11 @@ body{
 
 .badge{
 
-    background:var(--main-color);
+    background:var(--primary);
 
     color:white;
 
-    padding:6px 12px;
+    padding:5px 12px;
 
     border-radius:999px;
 
@@ -387,57 +439,23 @@ body{
 
 }
 
-/* =====================================
-   天気カード
-===================================== */
-
-.weather{
-
-    text-align:center;
-
-}
-
-.weather-icon{
-
-    font-size:70px;
-
-    margin-bottom:10px;
-
-}
-
-.weather-temp{
-
-    font-size:34px;
-
-    font-weight:bold;
-
-    color:var(--main-color);
-
-}
-
-.weather-text{
-
-    color:#555;
-
-    margin-top:8px;
-
-}
-
-/* =====================================
+/* ==========================================
    ボタン
-===================================== */
+========================================== */
 
 .button{
 
     display:inline-block;
 
-    background:var(--main-color);
+    margin-top:18px;
+
+    background:var(--primary);
 
     color:white;
 
     text-decoration:none;
 
-    padding:12px 20px;
+    padding:12px 18px;
 
     border-radius:12px;
 
@@ -447,29 +465,55 @@ body{
 
 .button:hover{
 
-    background:var(--main-dark);
+    background:var(--primary-dark);
 
     transform:translateY(-2px);
 
-}/* =====================================
-   右サイド
-===================================== */
-
-.right{
-
-    padding:30px;
-
 }
 
-/* =====================================
-   フッター
-===================================== */
+/* ==========================================
+   天気カード
+========================================== */
 
-.footer{
+.weather{
 
     text-align:center;
 
+}
+
+.weather-icon{
+
+    font-size:64px;
+
+    margin-bottom:10px;
+
+}
+
+.weather-temp{
+
+    font-size:38px;
+
+    font-weight:bold;
+
+    color:var(--primary);
+
+}
+
+.weather-text{
+
+    margin-top:10px;
+
+    color:#666;
+
+}/* ==========================================
+   フッター
+========================================== */
+
+.footer{
+
     margin-top:40px;
+
+    text-align:center;
 
     color:#666;
 
@@ -477,9 +521,18 @@ body{
 
 }
 
-/* =====================================
-   入力欄
-===================================== */
+/* ==========================================
+   入力フォーム
+========================================== */
+
+input,
+select,
+textarea,
+button{
+
+    font-family:inherit;
+
+}
 
 input,
 select,
@@ -489,15 +542,11 @@ textarea{
 
     padding:12px;
 
-    margin-top:8px;
-
     border:1px solid rgba(0,0,0,.15);
 
     border-radius:12px;
 
     outline:none;
-
-    background:rgba(255,255,255,.55);
 
     transition:.25s;
 
@@ -507,71 +556,47 @@ input:focus,
 select:focus,
 textarea:focus{
 
-    border-color:var(--main-color);
+    border-color:var(--primary);
 
     box-shadow:0 0 0 3px rgba(37,99,235,.15);
 
 }
 
-/* =====================================
+/* ==========================================
    テーマカラー
-===================================== */
+========================================== */
 
 .theme-blue{
 
-    --main-color:#2563eb;
-    --main-dark:#1d4ed8;
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
 
 }
 
 .theme-green{
 
-    --main-color:#16a34a;
-    --main-dark:#15803d;
+    --primary:#16a34a;
+    --primary-dark:#15803d;
 
 }
 
 .theme-purple{
 
-    --main-color:#7c3aed;
-    --main-dark:#6d28d9;
+    --primary:#7c3aed;
+    --primary-dark:#6d28d9;
 
 }
 
 .theme-orange{
 
-    --main-color:#ea580c;
-    --main-dark:#c2410c;
+    --primary:#ea580c;
+    --primary-dark:#c2410c;
 
 }
 
-/* =====================================
-   スクロールバー
-===================================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#edf2f7;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:var(--main-color);
-
-    border-radius:999px;
-
-}
-
-/* =====================================
+/* ==========================================
    アニメーション
-===================================== */
+========================================== */
 
 @keyframes fadeIn{
 
@@ -595,98 +620,173 @@ textarea:focus{
 
 .card,
 .banner,
-.weather{
+.user{
 
     animation:fadeIn .6s ease;
 
 }
 
-/* =====================================
-   スマホ・タブレット対応
-===================================== */
+/* ==========================================
+   スクロールバー
+========================================== */
 
-@media(max-width:1000px){
+::-webkit-scrollbar{
 
-.container{
-
-grid-template-columns:220px 1fr;
+    width:10px;
 
 }
 
-.right{
+::-webkit-scrollbar-track{
 
-display:none;
-
-}
+    background:#e5e7eb;
 
 }
 
-@media(max-width:768px){
+::-webkit-scrollbar-thumb{
 
-.container{
+    background:var(--primary);
 
-grid-template-columns:1fr;
-
-}
-
-.sidebar{
-
-display:none;
+    border-radius:999px;
 
 }
 
-.main{
+::-webkit-scrollbar-thumb:hover{
 
-padding:20px;
-
-}
-
-.header{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:18px;
+    background:var(--primary-dark);
 
 }
 
-.clock{
+/* ==========================================
+   レスポンシブ（タブレット）
+========================================== */
 
-font-size:30px;
+@media (max-width:1000px){
 
-}
+    .container{
 
-.banner{
+        grid-template-columns:220px 1fr;
 
-padding:25px;
+    }
 
-}
+    .content{
 
-.banner h2{
+        grid-template-columns:1fr;
 
-font-size:24px;
+    }
 
-}
+    .right{
 
-.card{
+        margin-top:0;
 
-padding:20px;
-
-}
-
-.event{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:10px;
+    }
 
 }
 
+/* ==========================================
+   レスポンシブ（スマホ）
+========================================== */
+
+@media (max-width:768px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sidebar{
+
+        display:none;
+
+    }
+
+    .main{
+
+        padding:20px;
+
+    }
+
+    .header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .header h1{
+
+        font-size:28px;
+
+    }
+
+    .banner{
+
+        padding:25px;
+
+    }
+
+    .banner h2{
+
+        font-size:24px;
+
+    }
+
+    .clock{
+
+        font-size:34px;
+
+    }
+
+    .card{
+
+        padding:20px;
+
+    }
+
+    .event{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+
+    }
+
+    .button{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
 }
 
-/* =====================================
-   完了
-===================================== */
+/* ==========================================
+   印刷時
+========================================== */
+
+@media print{
+
+    .sidebar,
+    .button{
+
+        display:none;
+
+    }
+
+    body{
+
+        background:white;
+
+    }
+
+}
+
+/* ==========================================
+   Version 3 完成
+========================================== */
