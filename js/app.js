@@ -109,3 +109,92 @@ function scrollTopPage() {
     });
 
 }
+/* ---------- 長野市のリアルタイム天気 ---------- */
+
+async function loadWeather(){
+
+    try{
+
+        const response = await fetch(
+        "https://api.open-meteo.com/v1/forecast?latitude=36.6513&longitude=138.1810&current=temperature_2m,weather_code"
+        );
+
+        const data = await response.json();
+
+        const temp = document.getElementById("weatherTemp");
+        const icon = document.getElementById("weatherIcon");
+        const text = document.getElementById("weatherText");
+
+        if(temp){
+
+            temp.textContent =
+            `${Math.round(data.current.temperature_2m)}℃`;
+
+        }
+
+        if(icon && text){
+
+            const code =
+            data.current.weather_code;
+
+            if(code===0){
+
+                icon.textContent="☀️";
+                text.textContent="快晴";
+
+            }
+
+            else if(
+                code<=3
+            ){
+
+                icon.textContent="🌤";
+                text.textContent="晴れ";
+
+            }
+
+            else if(
+                code<=48
+            ){
+
+                icon.textContent="☁️";
+                text.textContent="くもり";
+
+            }
+
+            else if(
+                code<=67
+            ){
+
+                icon.textContent="🌧";
+                text.textContent="雨";
+
+            }
+
+            else if(
+                code<=77
+            ){
+
+                icon.textContent="❄️";
+                text.textContent="雪";
+
+            }
+
+            else{
+
+                icon.textContent="⛈";
+                text.textContent="荒天";
+
+            }
+
+        }
+
+    }
+
+    catch(e){
+
+        console.log(e);
+
+    }
+
+}
