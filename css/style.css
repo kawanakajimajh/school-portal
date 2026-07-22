@@ -67,11 +67,11 @@ body{
     height:calc(100vh - 40px);
 
     background:
-background:rgba(37,99,235,.82);
-
-backdrop-filter:blur(18px);
-
--webkit-backdrop-filter:blur(18px);
+    linear-gradient(
+        180deg,
+        var(--primary),
+        var(--primary-dark)
+    );
 
     color:white;
 
