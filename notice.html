@@ -1,199 +1,236 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>お知らせ | 川中島中学校ポータルサイト</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Segoe UI","Yu Gothic UI","Meiryo",sans-serif;
-}
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-body{
-    background:#eef3f8;
-}
+<title>お知らせ | 川中島中学校ポータル</title>
 
-.app{
-    display:grid;
-    grid-template-columns:240px 1fr;
-    min-height:100vh;
-}
+<link rel="stylesheet"
+href="css/style.css">
 
-.sidebar{
-    background:linear-gradient(180deg,#2563eb,#1d4ed8);
-    color:white;
-    padding:25px;
-}
-
-.logo{
-    font-size:24px;
-    font-weight:bold;
-    line-height:1.5;
-    margin-bottom:35px;
-}
-
-.menu{
-    list-style:none;
-}
-
-.menu li{
-    margin-bottom:10px;
-}
-
-.menu a{
-    display:block;
-    padding:14px 16px;
-    color:white;
-    text-decoration:none;
-    border-radius:12px;
-    transition:.2s;
-}
-
-.menu a:hover,
-.menu a.active{
-    background:rgba(255,255,255,.18);
-}
-
-.main{
-    padding:30px;
-}
-
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
-}
-
-.page-title{
-    font-size:32px;
-    color:#2563eb;
-}
-
-.user{
-    background:white;
-    padding:12px 18px;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.notice{
-    background:white;
-    border-radius:16px;
-    padding:20px;
-    margin-bottom:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-    border-left:6px solid #2563eb;
-}
-
-.notice h2{
-    color:#2563eb;
-    margin-bottom:10px;
-    font-size:22px;
-}
-
-.notice-date{
-    color:#777;
-    margin-bottom:15px;
-    font-size:14px;
-}
-
-.notice p{
-    line-height:1.8;
-}
-
-.new{
-    display:inline-block;
-    background:#e53935;
-    color:white;
-    font-size:12px;
-    padding:3px 8px;
-    border-radius:999px;
-    margin-left:8px;
-}
-
-@media(max-width:700px){
-
-.app{
-grid-template-columns:1fr;
-}
-
-.sidebar{
-display:none;
-}
-
-}
-</style>
 </head>
 
-<body>
+<body class="theme-blue">
 
-<div class="app">
+<div class="container">
 
-<div class="sidebar">
+<!-- サイドバー -->
+
+<aside class="sidebar">
 
 <div class="logo">
+
 🏫<br>
+
 川中島中学校
+
 </div>
 
 <ul class="menu">
-<li><a href="index.html">🏠 ホーム</a></li>
-<li><a class="active" href="notice.html">📢 お知らせ</a></li>
-<li><a href="events.html">📅 学校行事</a></li>
-<li><a href="settings.html">⚙️ 設定</a></li>
+
+<li>
+
+<a href="index.html">
+
+🏠 ホーム
+
+</a>
+
+</li>
+
+<li>
+
+<a class="active"
+href="notice.html">
+
+📢 お知らせ
+
+</a>
+
+</li>
+
+<li>
+
+<a href="events.html">
+
+📅 学校行事
+
+</a>
+
+</li>
+
+<li>
+
+<a href="settings.html">
+
+⚙️ 設定
+
+</a>
+
+</li>
+
 </ul>
 
-</div>
+</aside>
 
-<div class="main">
+<!-- メイン -->
+
+<main class="main">
 
 <div class="header">
 
-<h1 class="page-title">📢 お知らせ</h1>
+<div>
+
+<h1>
+
+📢 お知らせ
+
+</h1>
+
+<p>
+
+学校からのお知らせを掲載しています。
+
+</p>
+
+</div>
 
 <div class="user">
-🔔 通知　
-👤 生徒
-</div>
+
+<div id="clock"
+class="clock">
+
+00:00:00
 
 </div>
 
-<div class="notice">
-<h2>体育祭について <span class="new">NEW</span></h2>
-<div class="notice-date">2026年7月22日</div>
-<p>
-体育祭は予定どおり実施します。<br>
-当日は体操着・タオル・飲み物を忘れずに持参してください。
-</p>
-</div>
+<div id="date"
+class="date">
 
-<div class="notice">
-<h2>夏休みについて</h2>
-<div class="notice-date">2026年7月20日</div>
-<p>
-夏休みは7月25日から始まります。<br>
-生活リズムを整え、課題にも計画的に取り組みましょう。
-</p>
-</div>
-
-<div class="notice">
-<h2>健康診断のお知らせ</h2>
-<div class="notice-date">2026年7月18日</div>
-<p>
-健康診断を体育館で実施します。<br>
-対象学年は時間を確認して集合してください。
-</p>
-</div>
+2026年7月22日（水）
 
 </div>
 
 </div>
+
+</div><!-- お知らせ一覧 -->
+
+<div class="card">
+
+    <h2>📢 最新のお知らせ</h2>
+
+    <div class="notice-item">
+
+        <strong>
+            体育祭について
+        </strong>
+
+        <span class="new">
+            NEW
+        </span>
+
+        <p>
+            体育祭は予定どおり実施します。<br>
+            当日は体操着・飲み物・タオルを忘れずに持参してください。
+        </p>
+
+    </div>
+
+    <div class="notice-item">
+
+        <strong>
+            夏季休業について
+        </strong>
+
+        <p>
+            夏季休業は7月25日から始まります。<br>
+            規則正しい生活を心掛けましょう。
+        </p>
+
+    </div>
+
+    <div class="notice-item">
+
+        <strong>
+            健康診断のお知らせ
+        </strong>
+
+        <p>
+            体育館で健康診断を実施します。<br>
+            集合時間を確認してください。
+        </p>
+
+    </div>
+
+    <div class="notice-item">
+
+        <strong>
+            図書室からのお知らせ
+        </strong>
+
+        <p>
+            夏休み用の長期貸出を開始しました。<br>
+            一人5冊まで借りることができます。
+        </p>
+
+    </div>
+
+    <div class="notice-item">
+
+        <strong>
+            部活動について
+        </strong>
+
+        <p>
+            夏季休業中の部活動予定は各部活動で配布された予定表を確認してください。
+        </p>
+
+    </div>
+
+</div>
+
+<br>
+
+<div class="card">
+
+    <h2>📌 お知らせについて</h2>
+
+    <p>
+
+        このページでは学校からのお知らせを掲載しています。
+
+    </p>
+
+    <br>
+
+    <p>
+
+        行事の変更や緊急連絡がある場合も、このページでお知らせします。
+
+    </p>
+
+</div>        <!-- フッター -->
+
+        <footer class="footer">
+
+            <p>
+                © 2026 川中島中学校ポータルサイト
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="js/app.js"></script>
 
 </body>
 </html>
-```
