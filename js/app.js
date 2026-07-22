@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateClock();
 
     setInterval(updateClock, 1000);
-
+loadWeather();
     const blue = document.getElementById("blueTheme");
     const green = document.getElementById("greenTheme");
     const purple = document.getElementById("purpleTheme");
