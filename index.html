@@ -4,384 +4,267 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>川中島中学校ポータルサイト</title>
+<title>川中島中学校ポータル</title>
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Yu Gothic UI","Segoe UI",sans-serif;
-}
-
-body{
-    background:#eef3f8;
-}
-
-.container{
-    display:grid;
-    grid-template-columns:240px 1fr 300px;
-    min-height:100vh;
-}
-
-/* サイドバー */
-
-.sidebar{
-
-    background:linear-gradient(180deg,#2563eb,#1d4ed8);
-    color:white;
-    padding:25px;
-
-}
-
-.logo{
-
-    font-size:24px;
-    font-weight:bold;
-    margin-bottom:40px;
-    line-height:1.5;
-
-}
-
-.menu{
-
-    list-style:none;
-
-}
-
-.menu li{
-
-    margin-bottom:10px;
-
-}
-
-.menu a{
-
-    display:block;
-    color:white;
-    text-decoration:none;
-    padding:14px 18px;
-    border-radius:12px;
-    transition:.2s;
-
-}
-
-.menu a:hover{
-
-    background:rgba(255,255,255,.15);
-
-}
-
-.menu a.active{
-
-    background:rgba(255,255,255,.22);
-
-}
-
-/* メイン */
-
-.main{
-
-    padding:30px;
-
-}
-
-.header{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
-
-}
-
-.clock{
-
-    font-size:34px;
-    font-weight:bold;
-    color:#2563eb;
-
-}
-
-.date{
-
-    color:#666;
-    margin-top:5px;
-
-}
-
-.user{
-
-    background:white;
-    padding:12px 18px;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-}
-
-.banner{
-
-    background:linear-gradient(135deg,#3b82f6,#2563eb);
-    color:white;
-    border-radius:18px;
-    padding:30px;
-    margin-bottom:25px;
-
-}
-
-.banner h2{
-
-    margin-bottom:10px;
-
-}
-
-.card{
-
-    background:white;
-    border-radius:18px;
-    padding:25px;
-    margin-bottom:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-}
-
-.card h3{
-
-    color:#2563eb;
-    margin-bottom:15px;
-
-}
-
-.notice-item{
-
-    padding:12px 0;
-    border-bottom:1px solid #eee;
-
-}
-
-.notice-item:last-child{
-
-    border-bottom:none;
-
-}
-
-/* 右側 */
-
-.right{
-
-    padding:25px;
-
-}
-
-.weather{
-
-    text-align:center;
-
-}
-
-.weather .icon{
-
-    font-size:60px;
-
-}
-
-@media(max-width:1000px){
-
-.container{
-
-grid-template-columns:220px 1fr;
-
-}
-
-.right{
-
-display:none;
-
-}
-
-}
-
-@media(max-width:700px){
-
-.container{
-
-grid-template-columns:1fr;
-
-}
-
-.sidebar{
-
-display:none;
-
-}
-
-}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body>
+<body class="theme-blue">
 
 <div class="container">
 
-<div class="sidebar">
+    <!-- サイドバー -->
 
-<div class="logo">
+    <aside class="sidebar">
 
-🏫<br>
-川中島中学校
+        <div class="logo">
+            🏫<br>
+            川中島中学校
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a class="active" href="index.html">
+                    🏠 ホーム
+                </a>
+            </li>
+
+            <li>
+                <a href="notice.html">
+                    📢 お知らせ
+                </a>
+            </li>
+
+            <li>
+                <a href="events.html">
+                    📅 学校行事
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    ⚙️ 設定
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- メイン -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <div>
+
+                <h1>
+                    川中島中学校ポータル
+                </h1>
+
+                <p>
+                    ようこそ、学校ポータルサイトへ
+                </p>
+
+            </div>
+
+            <div class="user">
+
+                <div id="clock" class="clock">
+                    00:00:00
+                </div>
+
+                <div id="date" class="date">
+                    2026年7月22日（水）
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- バナー -->
+
+        <section class="banner">
+
+            <h2>
+                🏫 川中島中学校ポータル
+            </h2>
+
+            <p>
+                学校からのお知らせや学校行事などを
+                いつでも確認できます。
+            </p>
+
+        </section>        <!-- コンテンツ -->
+
+        <div class="content">
+
+            <!-- 左側 -->
+
+            <div class="left">
+
+                <!-- お知らせ -->
+
+                <div class="card">
+
+                    <h2>📢 最新のお知らせ</h2>
+
+                    <div class="notice-item">
+                        <strong>体育祭について</strong>
+                        <span class="new">NEW</span>
+                        <p>体育祭は予定どおり実施します。</p>
+                    </div>
+
+                    <div class="notice-item">
+                        <strong>夏休みについて</strong>
+                        <p>7月25日から夏季休業です。</p>
+                    </div>
+
+                    <div class="notice-item">
+                        <strong>健康診断</strong>
+                        <p>対象学年は体育館へ集合してください。</p>
+                    </div>
+
+                    <br>
+
+                    <a href="notice.html" class="button">
+                        すべて見る →
+                    </a>
+
+                </div>
+
+                <!-- 学校行事 -->
+
+                <div class="card">
+
+                    <h2>📅 今後の学校行事</h2>
+
+                    <div class="event">
+
+                        <div class="event-date">
+                            7/22
+                        </div>
+
+                        <div class="event-title">
+                            終業式
+                        </div>
+
+                        <div class="badge">
+                            重要
+                        </div>
+
+                    </div>
+
+                    <div class="event">
+
+                        <div class="event-date">
+                            7/23
+                        </div>
+
+                        <div class="event-title">
+                            夏季休業開始
+                        </div>
+
+                        <div class="badge">
+                            予定
+                        </div>
+
+                    </div>
+
+                    <div class="event">
+
+                        <div class="event-date">
+                            7/30
+                        </div>
+
+                        <div class="event-title">
+                            三者懇談
+                        </div>
+
+                        <div class="badge">
+                            予定
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <a href="events.html" class="button">
+                        行事一覧を見る →
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- 右側 -->
+
+            <aside class="right">
+
+                <!-- 天気 -->
+
+                <div class="card weather">
+
+                    <div class="weather-icon">
+                        ☀️
+                    </div>
+
+                    <div class="weather-temp">
+                        30℃
+                    </div>
+
+                    <div class="weather-text">
+                        長野市　晴れ
+                    </div>
+
+                </div>
+
+                <!-- 学校情報 -->
+
+                <div class="card">
+
+                    <h2>🏫 学校情報</h2>
+
+                    <p>
+                        川中島中学校ポータルサイト
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Version 2.0
+                    </p>
+
+                    <br>
+
+                    <p>
+                        © 川中島中学校
+                    </p>
+
+                </div>            </aside>
+
+        </div>
+
+        <!-- フッター -->
+
+        <footer class="footer">
+
+            <p>
+                © 2026 川中島中学校ポータルサイト
+            </p>
+
+        </footer>
+
+    </main>
 
 </div>
 
-<ul class="menu">
+<!-- JavaScript -->
 
-<li><a class="active" href="index.html">🏠 ホーム</a></li>
-
-<li><a href="notice.html">📢 お知らせ</a></li>
-
-<li><a href="events.html">📅 学校行事</a></li>
-
-<li><a href="settings.html">⚙️ 設定</a></li>
-
-</ul>
-
-</div>
-
-<div class="main">
-
-<div class="header">
-
-<div>
-
-<div id="clock" class="clock"></div>
-
-<div id="date" class="date"></div>
-
-</div>
-
-<div class="user">
-
-🔔 通知
-
-</div>
-
-</div>
-
-<div class="banner">
-
-<h2>川中島中学校ポータルへようこそ！</h2>
-
-<p>
-
-学校からのお知らせや学校行事を確認できます。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>📢 最新のお知らせ</h3>
-
-<div class="notice-item">
-
-体育祭のお知らせ
-
-</div>
-
-<div class="notice-item">
-
-夏休みについて
-
-</div>
-
-<div class="notice-item">
-
-健康診断のお知らせ
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>📅 近日中の学校行事</h3>
-```html
-<div class="notice-item">
-7月22日　終業式
-</div>
-
-<div class="notice-item">
-7月23日　夏季休業開始
-</div>
-
-<div class="notice-item">
-8月20日　登校日
-</div>
-
-</div>
-
-</div>
-
-<div class="right">
-
-<div class="card weather">
-
-<h3>🌤 天気</h3>
-
-<div class="icon">
-☀️
-</div>
-
-<h2>29℃</h2>
-
-<p>晴れ</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏫 学校からのメッセージ</h3>
-
-<p style="line-height:1.8;">
-
-川中島中学校ポータルへようこそ。<br><br>
-
-このサイトでは学校からのお知らせや
-学校行事を確認できます。
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-function updateClock(){
-
-const now=new Date();
-
-const week=["日","月","火","水","木","金","土"];
-
-document.getElementById("clock").textContent=
-now.toLocaleTimeString("ja-JP");
-
-document.getElementById("date").textContent=
-`${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日 (${week[now.getDay()]})`;
-
-}
-
-updateClock();
-
-setInterval(updateClock,1000);
-
-</script>
 <script src="js/app.js"></script>
+
 </body>
 </html>
-```
