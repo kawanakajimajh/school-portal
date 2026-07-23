@@ -270,7 +270,73 @@
         </section>
 
     </main>
+<!-- =====================================
+     新しいお知らせ モーダル
+===================================== -->
 
+<div id="noticeModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>📢 新しいお知らせ</h2>
+
+        </div>
+
+        <div class="modal-body">
+
+            <div class="form-group">
+
+                <label>タイトル</label>
+
+                <input
+                    type="text"
+                    id="noticeTitle"
+                    class="form-control"
+                    placeholder="タイトルを入力">
+
+            </div>
+
+            <br>
+
+            <div class="form-group">
+
+                <label>本文</label>
+
+                <textarea
+                    id="noticeContent"
+                    class="form-control"
+                    rows="8"
+                    placeholder="本文を入力"></textarea>
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+            <button
+                id="cancelNotice"
+                class="btn btn-outline">
+
+                キャンセル
+
+            </button>
+
+            <button
+                id="saveNotice"
+                class="btn btn-primary">
+
+                保存
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 </div><!-- JavaScript -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
