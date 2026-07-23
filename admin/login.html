@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>管理者ログイン</title>
+    <title>管理者ログイン | 川中島中学校 CMS</title>
 
     <link rel="stylesheet" href="../css/admin.css">
 
@@ -15,90 +15,138 @@
 
 <body>
 
-<main class="login-page">
+    <main class="login-page">
 
-    <section class="login-card">
+        <section class="login-card">
 
-        <div class="login-logo">
-            🏫
-        </div>
+            <!-- ロゴ -->
+            <div class="login-logo">
+                🏫
+            </div>
 
-        <h1 class="login-title">
-            川中島中学校 CMS
-        </h1>
+            <!-- タイトル -->
+            <h1 class="login-title">
+                川中島中学校 CMS
+            </h1>
 
-        <p class="login-subtitle">
-            Version4 管理システム<br>
-            管理者専用ページ
-        </p>
+            <p class="login-subtitle">
+                Version 4 管理システム<br>
+                管理者専用ページ
+            </p>
 
-        <form class="login-form">
+            <!-- ログインフォーム -->
+            <form id="loginForm" class="login-form">
 
-            <div class="form-group">
+                <!-- メールアドレス -->
+                <div class="form-group">
 
-                <label class="form-label">
-                    メールアドレス
+                    <label for="email" class="form-label">
+                        メールアドレス
+                    </label>
+
+                    <input
+                        id="email"
+                        class="form-input"
+                        type="email"
+                        placeholder="teacher@example.com"
+                        autocomplete="email"
+                        required>
+
+                </div>
+
+                <!-- パスワード -->
+                <div class="form-group">
+
+                    <label for="password" class="form-label">
+                        パスワード
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            id="password"
+                            class="form-input"
+                            type="password"
+                            placeholder="パスワード"
+                            autocomplete="current-password"
+                            required>
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="password-toggle"
+                            aria-label="パスワード表示切替">
+
+                            👁
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- ログイン保持 -->
+                <label class="remember">
+
+                    <input
+                        id="remember"
+                        type="checkbox">
+
+                    ログイン状態を保持する
+
                 </label>
 
-                <input
-                    class="form-input"
-                    type="email"
-                    placeholder="teacher@example.com">
+                <!-- エラーメッセージ -->
+                <div
+                    id="loginError"
+                    class="form-error">
+
+                </div>
+
+                <!-- ログインボタン -->
+                <button
+                    class="login-button"
+                    type="submit">
+
+                    ログイン
+
+                </button>
+
+                <!-- ローディング -->
+                <div
+                    id="loading"
+                    class="loading"
+                    style="display:none;">
+
+                    <div class="loading-spinner"></div>
+
+                    <span>ログイン中...</span>
+
+                </div>
+
+            </form>
+
+            <div class="login-divider"></div>
+
+            <!-- フッター -->
+            <div class="login-footer">
+
+                <strong>
+                    川中島中学校 CMS Version4
+                </strong>
+
+                <br>
+
+                © 2026 Kawanakajima Junior High School
 
             </div>
 
-            <div class="form-group">
+        </section>
 
-                <label class="form-label">
-                    パスワード
-                </label>
+    </main>
 
-                <input
-                    class="form-input"
-                    type="password"
-                    placeholder="パスワード">
-
-            </div>
-
-            <label class="remember">
-
-                <input type="checkbox">
-
-                ログイン状態を保持する
-
-            </label>
-
-            <button
-                class="login-button"
-                type="submit">
-
-                ログイン
-
-            </button>
-
-        </form>
-
-        <div class="login-divider"></div>
-
-        <div class="login-footer">
-
-            <strong>
-
-                川中島中学校 CMS Version4
-
-            </strong>
-
-            <br>
-
-            ©2026 Kawanakajima Junior High School
-
-        </div>
-
-    </section>
-
-</main>
-
-<script src="../js/auth.js"></script>
+    <script src="../js/auth.js"></script>
 
 </body>
+
 </html>
