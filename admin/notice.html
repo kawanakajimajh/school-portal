@@ -83,14 +83,6 @@
 
             </a>
 
-            <a href="files.html">
-
-                <span class="menu-icon">📂</span>
-
-                <span>ファイル管理</span>
-
-            </a>
-
             <a href="users.html">
 
                 <span class="menu-icon">👤</span>
@@ -147,7 +139,7 @@
 
             <div class="header-right">
 
-                <button class="primary-button">
+                <button class="primary-button" id="addNoticeButton">
 
                     ＋ 新しいお知らせ
 
@@ -161,7 +153,7 @@
 
         <section class="dashboard-content">
 
-            <!-- 検索バー -->
+            <!-- 検索 -->
 
             <div class="content-card">
 
@@ -175,8 +167,7 @@
                     <select class="filter-select">
 
                         <option>すべて</option>
-                        <option>公開中</option>
-                        <option>下書き</option>
+                        <option>公開</option>
 
                     </select>
 
@@ -214,187 +205,7 @@
 
                     </thead>
 
-                    <tbody>
-
-                        <tr>
-
-                            <td>1</td>
-
-                            <td>体育祭について</td>
-
-                            <td>2026/07/22</td>
-
-                            <td>
-
-                                <span class="status published">
-
-                                    公開
-
-                                </span>
-
-                            </td>
-
-                            <td>
-
-                                <button class="edit-button">
-
-                                    編集
-
-                                </button>
-
-                                <button class="delete-button">
-
-                                    削除
-
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>2</td>
-
-                            <td>夏休みについて</td>
-
-                            <td>2026/07/20</td>
-
-                            <td>
-
-                                <span class="status published">
-
-                                    公開
-
-                                </span>
-
-                            </td>
-
-                            <td>
-
-                                <button class="edit-button">
-
-                                    編集
-
-                                </button>
-
-                                <button class="delete-button">
-
-                                    削除
-
-                                </button>
-
-                            </td>
-
-                        </tr>                        <tr>
-
-                            <td>3</td>
-
-                            <td>健康診断について</td>
-
-                            <td>2026/07/18</td>
-
-                            <td>
-
-                                <span class="status draft">
-
-                                    下書き
-
-                                </span>
-
-                            </td>
-
-                            <td>
-
-                                <button class="edit-button">
-
-                                    編集
-
-                                </button>
-
-                                <button class="delete-button">
-
-                                    削除
-
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>4</td>
-
-                            <td>三者懇談のお知らせ</td>
-
-                            <td>2026/07/15</td>
-
-                            <td>
-
-                                <span class="status published">
-
-                                    公開
-
-                                </span>
-
-                            </td>
-
-                            <td>
-
-                                <button class="edit-button">
-
-                                    編集
-
-                                </button>
-
-                                <button class="delete-button">
-
-                                    削除
-
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>5</td>
-
-                            <td>部活動について</td>
-
-                            <td>2026/07/10</td>
-
-                            <td>
-
-                                <span class="status published">
-
-                                    公開
-
-                                </span>
-
-                            </td>
-
-                            <td>
-
-                                <button class="edit-button">
-
-                                    編集
-
-                                </button>
-
-                                <button class="delete-button">
-
-                                    削除
-
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                    </tbody>
+                    <tbody id="notice-list">                    </tbody>
 
                 </table>
 
@@ -418,18 +229,6 @@
 
                     </button>
 
-                    <button class="page-number">
-
-                        2
-
-                    </button>
-
-                    <button class="page-number">
-
-                        3
-
-                    </button>
-
                     <button class="page-button">
 
                         次へ ▶
@@ -450,95 +249,13 @@
 
                 </h2>
 
-                <div class="recent-list">
-
-                    <div class="recent-item">
-
-                        <div>
-
-                            <strong>
-
-                                体育祭について
-
-                            </strong>
-
-                            <br>
-
-                            <small>
-
-                                2026年7月22日 08:30
-
-                            </small>
-
-                        </div>
-
-                        <span class="status published">
-
-                            公開
-
-                        </span>
-
-                    </div>
-
-                    <div class="recent-item">
-
-                        <div>
-
-                            <strong>
-
-                                夏休みについて
-
-                            </strong>
-
-                            <br>
-
-                            <small>
-
-                                2026年7月20日 16:10
-
-                            </small>
-
-                        </div>
-
-                        <span class="status published">
-
-                            公開
-
-                        </span>
-
-                    </div>
-
-                    <div class="recent-item">
-
-                        <div>
-
-                            <strong>
-
-                                健康診断について
-
-                            </strong>
-
-                            <br>
-
-                            <small>
-
-                                2026年7月18日 10:20
-
-                            </small>
-
-                        </div>
-
-                        <span class="status draft">
-
-                            下書き
-
-                        </span>
-
-                    </div>
+                <div id="recent-notices" class="recent-list">
 
                 </div>
 
-            </div>            <!-- フッター -->
+            </div>
+
+            <!-- フッター -->
 
             <footer class="dashboard-footer">
 
@@ -554,9 +271,7 @@
 
     </main>
 
-</div>
-
-<!-- JavaScript -->
+</div><!-- JavaScript -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -567,6 +282,8 @@
 <script src="../js/logout.js"></script>
 
 <script src="../js/dashboard.js"></script>
+
+<script src="../js/notice.js"></script>
 
 </body>
 
