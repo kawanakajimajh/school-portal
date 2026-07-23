@@ -1,1 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ホーム管理 | 川中島中学校 CMS</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ===== サイドバー ===== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">🏫</div>
+
+            <h2>川中島中学校</h2>
+
+            <p>CMS Version4</p>
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+
+                <span class="menu-icon">📊</span>
+
+                <span>ダッシュボード</span>
+
+            </a>
+
+            <a href="notice.html">
+
+                <span class="menu-icon">📢</span>
+
+                <span>お知らせ管理</span>
+
+            </a>
+
+            <a href="events.html">
+
+                <span class="menu-icon">📅</span>
+
+                <span>学校行事管理</span>
+
+            </a>
+
+            <a href="home.html" class="active">
+
+                <span class="menu-icon">🏠</span>
+
+                <span>ホーム管理</span>
+
+            </a>
+
+            <a href="files.html">
+
+                <span class="menu-icon">📂</span>
+
+                <span>ファイル管理</span>
+
+            </a>
+
+            <a href="users.html">
+
+                <span class="menu-icon">👤</span>
+
+                <span>管理者管理</span>
+
+            </a>
+
+            <a href="settings.html">
+
+                <span class="menu-icon">⚙️</span>
+
+                <span>サイト設定</span>
+
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html">
+
+                <span class="menu-icon">🚪</span>
+
+                <span>ログアウト</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ===== メイン ===== -->
+
+    <main class="dashboard-main">
+
+        <header class="top-header">
+
+            <div>
+
+                <h1 class="page-title">
+
+                    🏠 ホーム管理
+
+                </h1>
+
+                <p class="page-subtitle">
+
+                    トップページの内容を編集できます。
+
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <button class="primary-button">
+
+                    💾 保存する
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <section class="dashboard-content">
+
+            <!-- 基本情報 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    🏫 サイト基本情報
+
+                </h2>
+
+                <div class="form-group">
+
+                    <label>
+
+                        学校名
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-input"
+                        value="川中島中学校">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        サブタイトル
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-input"
+                        value="未来へ羽ばたく学びの学校">
+
+                </div>
+
+            </div>
+
+            <!-- トップ画像 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    🖼 トップ画像
+
+                </h2>
+
+                <p>
+
+                    現在の画像
+
+                </p>
+
+                <input
+                    type="text"
+                    class="form-input"
+                    value="images/main-visual.jpg"
+                    readonly>
+
+                <br><br>
+
+                <button class="secondary-button">
+
+                    📂 画像を変更
+
+                </button>
+
+            </div>            <!-- メインお知らせ -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    📢 メインお知らせ
+
+                </h2>
+
+                <div class="form-group">
+
+                    <label>
+
+                        トップページに表示するお知らせ
+
+                    </label>
+
+                    <textarea
+                        class="form-textarea"
+                        rows="6"
+                        placeholder="ここにお知らせを入力してください。">明日は通常授業です。
+熱中症対策として、水筒を忘れずに持参してください。</textarea>
+
+                </div>
+
+            </div>
+
+            <!-- クイックリンク -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    🔗 クイックリンク
+
+                </h2>
+
+                <div class="checkbox-group">
+
+                    <label>
+
+                        <input type="checkbox" checked>
+
+                        保護者向けページを表示
+
+                    </label>
+
+                </div>
+
+                <div class="checkbox-group">
+
+                    <label>
+
+                        <input type="checkbox" checked>
+
+                        生徒向けページを表示
+
+                    </label>
+
+                </div>
+
+                <div class="checkbox-group">
+
+                    <label>
+
+                        <input type="checkbox" checked>
+
+                        教職員向けページを表示
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- 学校情報 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    ☎ 学校情報
+
+                </h2>
+
+                <div class="form-group">
+
+                    <label>
+
+                        電話番号
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-input"
+                        value="026-123-4567">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        メールアドレス
+
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-input"
+                        value="school@example.jp">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        学校住所
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-input"
+                        value="長野県長野市〇〇町1234">
+
+                </div>
+
+            </div>
+
+            <!-- SNS -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    🌐 SNS・ホームページ
+
+                </h2>
+
+                <div class="form-group">
+
+                    <label>
+
+                        学校ホームページURL
+
+                    </label>
+
+                    <input
+                        type="url"
+                        class="form-input"
+                        value="https://kawanakajimajh.github.io/school-portal/">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        YouTubeチャンネル
+
+                    </label>
+
+                    <input
+                        type="url"
+                        class="form-input"
+                        placeholder="https://youtube.com/...">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        X（旧Twitter）
+
+                    </label>
+
+                    <input
+                        type="url"
+                        class="form-input"
+                        placeholder="https://x.com/...">
+
+                </div>
+
+            </div>            <!-- 保存エリア -->
+
+            <div class="content-card">
+
+                <div class="save-area">
+
+                    <button class="primary-button save-button">
+
+                        💾 変更を保存
+
+                    </button>
+
+                    <button class="secondary-button preview-button">
+
+                        👀 プレビュー
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- フッター -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+
+                    © 2026 川中島中学校 CMS Version4
+
+                </p>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="../js/home.js"></script>
+
+</body>
+
+</html>
