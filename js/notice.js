@@ -75,3 +75,43 @@ async function loadNotices() {
 }
 
 loadNotices();
+// =====================================
+// モーダル
+// =====================================
+
+const addButton = document.getElementById("addNoticeButton");
+
+const modal = document.getElementById("noticeModal");
+
+const cancelButton = document.getElementById("cancelNotice");
+
+
+// 新規作成ボタン
+
+addButton.addEventListener("click", () => {
+
+    modal.classList.add("show");
+
+});
+
+
+// キャンセルボタン
+
+cancelButton.addEventListener("click", () => {
+
+    modal.classList.remove("show");
+
+});
+
+
+// 背景クリック
+
+modal.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+
+        modal.classList.remove("show");
+
+    }
+
+});
