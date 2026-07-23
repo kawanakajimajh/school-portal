@@ -1,1 +1,577 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        学校行事管理 | 川中島中学校 CMS
+
+    </title>
+
+    <link rel="stylesheet"
+          href="../css/admin.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ===== サイドバー ===== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+
+                🏫
+
+            </div>
+
+            <h2>
+
+                川中島中学校
+
+            </h2>
+
+            <p>
+
+                CMS Version4
+
+            </p>
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+
+                <span class="menu-icon">📊</span>
+
+                <span>ダッシュボード</span>
+
+            </a>
+
+            <a href="notice.html">
+
+                <span class="menu-icon">📢</span>
+
+                <span>お知らせ管理</span>
+
+            </a>
+
+            <a href="events.html" class="active">
+
+                <span class="menu-icon">📅</span>
+
+                <span>学校行事管理</span>
+
+            </a>
+
+            <a href="home.html">
+
+                <span class="menu-icon">🏠</span>
+
+                <span>ホーム管理</span>
+
+            </a>
+
+            <a href="files.html">
+
+                <span class="menu-icon">📂</span>
+
+                <span>ファイル管理</span>
+
+            </a>
+
+            <a href="users.html">
+
+                <span class="menu-icon">👤</span>
+
+                <span>管理者管理</span>
+
+            </a>
+
+            <a href="settings.html">
+
+                <span class="menu-icon">⚙️</span>
+
+                <span>サイト設定</span>
+
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html">
+
+                <span class="menu-icon">🚪</span>
+
+                <span>ログアウト</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ===== メイン ===== -->
+
+    <main class="dashboard-main">
+
+        <header class="top-header">
+
+            <div>
+
+                <h1 class="page-title">
+
+                    📅 学校行事管理
+
+                </h1>
+
+                <p class="page-subtitle">
+
+                    学校行事を追加・編集・削除できます。
+
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <button class="primary-button">
+
+                    ＋ 新しい行事
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- コンテンツ -->
+
+        <section class="dashboard-content">
+
+            <!-- 検索バー -->
+
+            <div class="content-card">
+
+                <div class="table-toolbar">
+
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="学校行事を検索...">
+
+                    <select class="filter-select">
+
+                        <option>すべて</option>
+                        <option>公開</option>
+                        <option>下書き</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- 行事一覧 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    📋 学校行事一覧
+
+                </h2>
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>日付</th>
+
+                            <th>行事名</th>
+
+                            <th>場所</th>
+
+                            <th>状態</th>
+
+                            <th>操作</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>1</td>
+
+                            <td>2026/07/22</td>
+
+                            <td>終業式</td>
+
+                            <td>体育館</td>
+
+                            <td>
+
+                                <span class="status published">
+
+                                    公開
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-button">
+
+                                    編集
+
+                                </button>
+
+                                <button class="delete-button">
+
+                                    削除
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>2</td>
+
+                            <td>2026/07/23</td>
+
+                            <td>夏季休業開始</td>
+
+                            <td>―</td>
+
+                            <td>
+
+                                <span class="status published">
+
+                                    公開
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-button">
+
+                                    編集
+
+                                </button>
+
+                                <button class="delete-button">
+
+                                    削除
+
+                                </button>
+
+                            </td>
+
+                        </tr>                        <tr>
+
+                            <td>3</td>
+
+                            <td>2026/07/30</td>
+
+                            <td>三者懇談</td>
+
+                            <td>各教室</td>
+
+                            <td>
+
+                                <span class="status published">
+
+                                    公開
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-button">
+
+                                    編集
+
+                                </button>
+
+                                <button class="delete-button">
+
+                                    削除
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>4</td>
+
+                            <td>2026/08/25</td>
+
+                            <td>始業式</td>
+
+                            <td>体育館</td>
+
+                            <td>
+
+                                <span class="status draft">
+
+                                    下書き
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-button">
+
+                                    編集
+
+                                </button>
+
+                                <button class="delete-button">
+
+                                    削除
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>5</td>
+
+                            <td>2026/09/12</td>
+
+                            <td>文化祭</td>
+
+                            <td>校内</td>
+
+                            <td>
+
+                                <span class="status published">
+
+                                    公開
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-button">
+
+                                    編集
+
+                                </button>
+
+                                <button class="delete-button">
+
+                                    削除
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- ページ切り替え -->
+
+            <div class="content-card">
+
+                <div class="pagination">
+
+                    <button class="page-button">
+
+                        ◀ 前へ
+
+                    </button>
+
+                    <button class="page-number active">
+
+                        1
+
+                    </button>
+
+                    <button class="page-number">
+
+                        2
+
+                    </button>
+
+                    <button class="page-number">
+
+                        3
+
+                    </button>
+
+                    <button class="page-button">
+
+                        次へ ▶
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- 近日開催の行事 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    📅 近日開催の行事
+
+                </h2>
+
+                <div class="recent-list">
+
+                    <div class="recent-item">
+
+                        <div>
+
+                            <strong>
+
+                                終業式
+
+                            </strong>
+
+                            <br>
+
+                            <small>
+
+                                2026年7月22日　体育館
+
+                            </small>
+
+                        </div>
+
+                        <span class="status published">
+
+                            開催予定
+
+                        </span>
+
+                    </div>
+
+                    <div class="recent-item">
+
+                        <div>
+
+                            <strong>
+
+                                夏季休業開始
+
+                            </strong>
+
+                            <br>
+
+                            <small>
+
+                                2026年7月23日
+
+                            </small>
+
+                        </div>
+
+                        <span class="status published">
+
+                            開催予定
+
+                        </span>
+
+                    </div>
+
+                    <div class="recent-item">
+
+                        <div>
+
+                            <strong>
+
+                                三者懇談
+
+                            </strong>
+
+                            <br>
+
+                            <small>
+
+                                2026年7月30日　各教室
+
+                            </small>
+
+                        </div>
+
+                        <span class="status published">
+
+                            開催予定
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>            <!-- フッター -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+
+                    © 2026 川中島中学校 CMS Version4
+
+                </p>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="../js/events.js"></script>
+
+</body>
+
+</html>
