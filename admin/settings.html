@@ -1,1 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>サイト設定 | 川中島中学校 CMS</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- サイドバー -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">🏫</div>
+
+            <h2>川中島中学校</h2>
+
+            <p>CMS Version4</p>
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+
+                <span class="menu-icon">📊</span>
+
+                <span>ダッシュボード</span>
+
+            </a>
+
+            <a href="notice.html">
+
+                <span class="menu-icon">📢</span>
+
+                <span>お知らせ管理</span>
+
+            </a>
+
+            <a href="events.html">
+
+                <span class="menu-icon">📅</span>
+
+                <span>学校行事管理</span>
+
+            </a>
+
+            <a href="home.html">
+
+                <span class="menu-icon">🏠</span>
+
+                <span>ホーム管理</span>
+
+            </a>
+
+            <a href="users.html">
+
+                <span class="menu-icon">👤</span>
+
+                <span>管理者管理</span>
+
+            </a>
+
+            <a href="settings.html" class="active">
+
+                <span class="menu-icon">⚙️</span>
+
+                <span>サイト設定</span>
+
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html">
+
+                <span class="menu-icon">🚪</span>
+
+                <span>ログアウト</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- メイン -->
+
+    <main class="dashboard-main">
+
+        <header class="top-header">
+
+            <div>
+
+                <h1 class="page-title">
+
+                    ⚙️ サイト設定
+
+                </h1>
+
+                <p class="page-subtitle">
+
+                    学校ホームページ全体の設定を管理します。
+
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <button class="primary-button">
+
+                    💾 保存する
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <section class="dashboard-content">
+
+            <!-- 基本設定 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    🏫 基本設定
+
+                </h2>
+
+                <div class="form-group">
+
+                    <label>
+
+                        学校名
+
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-input"
+                        value="川中島中学校">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        学校ホームページURL
+
+                    </label>
+
+                    <input
+                        type="url"
+                        class="form-input"
+                        value="https://kawanakajimajh.github.io/school-portal/">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        管理者メールアドレス
+
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-input"
+                        value="admin@example.jp">
+
+                </div>
+
+            </div>
+
+            <!-- デザイン設定 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    🎨 デザイン設定
+
+                </h2>
+
+                <div class="form-group">
+
+                    <label>
+
+                        メインカラー
+
+                    </label>
+
+                    <input
+                        type="color"
+                        class="form-input"
+                        value="#2563eb">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        ロゴ画像
+
+                    </label>
+
+                    <button class="secondary-button">
+
+                        🖼 ロゴ画像を変更
+
+                    </button>
+
+                </div>
+
+            </div>            <!-- セキュリティ設定 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    🔒 セキュリティ設定
+
+                </h2>
+
+                <div class="form-group">
+
+                    <label>
+
+                        ログイン試行回数
+
+                    </label>
+
+                    <input
+                        type="number"
+                        class="form-input"
+                        value="5">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        セッション有効時間（分）
+
+                    </label>
+
+                    <input
+                        type="number"
+                        class="form-input"
+                        value="60">
+
+                </div>
+
+            </div>
+
+            <!-- メール通知 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    📧 メール通知
+
+                </h2>
+
+                <div class="form-group">
+
+                    <label>
+
+                        <input type="checkbox" checked>
+
+                        お知らせ公開時に通知する
+
+                    </label>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        ログイン失敗時に通知する
+
+                    </label>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+
+                        <input type="checkbox" checked>
+
+                        システム更新時に通知する
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- システム情報 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    💻 システム情報
+
+                </h2>
+
+                <table class="admin-table">
+
+                    <tbody>
+
+                        <tr>
+
+                            <th>CMSバージョン</th>
+
+                            <td>Version 4.0</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>管理画面</th>
+
+                            <td>正常動作中</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>データベース</th>
+
+                            <td>Phase2でSupabase接続予定</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>最終更新日</th>
+
+                            <td>2026年7月23日</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- バックアップ -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    💾 バックアップ
+
+                </h2>
+
+                <p>
+
+                    サイト設定やデータのバックアップ機能は、Phase2で実装予定です。
+
+                </p>
+
+                <br>
+
+                <button class="secondary-button">
+
+                    📥 バックアップを作成
+
+                </button>
+
+            </div>            <!-- 保存エリア -->
+
+            <div class="content-card">
+
+                <div class="save-area">
+
+                    <button class="primary-button save-button">
+
+                        💾 設定を保存
+
+                    </button>
+
+                    <button class="secondary-button reset-button">
+
+                        🔄 初期設定に戻す
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- フッター -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+
+                    © 2026 川中島中学校 CMS Version4
+
+                </p>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="../js/settings.js"></script>
+
+</body>
+
+</html>
