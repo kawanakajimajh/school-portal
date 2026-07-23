@@ -115,3 +115,55 @@ modal.addEventListener("click", (e) => {
     }
 
 });
+// =====================================
+// 保存ボタン
+// =====================================
+
+const saveButton = document.getElementById("saveNotice");
+
+saveButton.addEventListener("click", saveNotice);
+
+async function saveNotice() {
+
+    const title = document.getElementById("noticeTitle").value.trim();
+
+    const content = document.getElementById("noticeContent").value.trim();
+
+    if (!title || !content) {
+
+        alert("タイトルと本文を入力してください。");
+
+        return;
+
+    }
+
+    const { error } = await db
+        .from("notices")
+        .insert([
+            {
+                title: title,
+                content: content
+            }
+        ]);
+
+    if (error) {
+
+        console.error(error);
+
+        alert("保存できませんでした。");
+
+        return;
+
+    }
+
+    alert("保存しました！");
+
+    document.getElementById("noticeTitle").value = "";
+
+    document.getElementById("noticeContent").value = "";
+
+    modal.classList.remove("show");
+
+    loadNotices();
+
+}
