@@ -1,1 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>管理者管理 | 川中島中学校 CMS</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ===== サイドバー ===== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">🏫</div>
+
+            <h2>川中島中学校</h2>
+
+            <p>CMS Version4</p>
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html">
+
+                <span class="menu-icon">📊</span>
+
+                <span>ダッシュボード</span>
+
+            </a>
+
+            <a href="notice.html">
+
+                <span class="menu-icon">📢</span>
+
+                <span>お知らせ管理</span>
+
+            </a>
+
+            <a href="events.html">
+
+                <span class="menu-icon">📅</span>
+
+                <span>学校行事管理</span>
+
+            </a>
+
+            <a href="home.html">
+
+                <span class="menu-icon">🏠</span>
+
+                <span>ホーム管理</span>
+
+            </a>
+
+            <a href="users.html" class="active">
+
+                <span class="menu-icon">👤</span>
+
+                <span>管理者管理</span>
+
+            </a>
+
+            <a href="settings.html">
+
+                <span class="menu-icon">⚙️</span>
+
+                <span>サイト設定</span>
+
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html">
+
+                <span class="menu-icon">🚪</span>
+
+                <span>ログアウト</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ===== メイン ===== -->
+
+    <main class="dashboard-main">
+
+        <header class="top-header">
+
+            <div>
+
+                <h1 class="page-title">
+
+                    👤 管理者管理
+
+                </h1>
+
+                <p class="page-subtitle">
+
+                    管理者アカウントの追加・編集・削除を行います。
+
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <button class="primary-button">
+
+                    ➕ 管理者を追加
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <section class="dashboard-content">
+
+            <!-- 検索 -->
+
+            <div class="content-card">
+
+                <div class="search-area">
+
+                    <input
+                        type="text"
+                        class="search-input"
+                        placeholder="管理者名・メールアドレスで検索">
+
+                    <button class="secondary-button">
+
+                        🔍 検索
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- 管理者一覧 -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    👥 管理者一覧
+
+                </h2>
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>名前</th>
+
+                            <th>メールアドレス</th>
+
+                            <th>権限</th>
+
+                            <th>状態</th>
+
+                            <th>操作</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>1</td>
+
+                            <td>校長先生</td>
+
+                            <td>principal@example.jp</td>
+
+                            <td>
+
+                                <span class="status published">
+
+                                    管理者
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="status published">
+
+                                    有効
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-button">
+
+                                    編集
+
+                                </button>
+
+                                <button class="delete-button">
+
+                                    削除
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>2</td>
+
+                            <td>教頭先生</td>
+
+                            <td>vice@example.jp</td>
+
+                            <td>
+
+                                <span class="status published">
+
+                                    管理者
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="status published">
+
+                                    有効
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-button">
+
+                                    編集
+
+                                </button>
+
+                                <button class="delete-button">
+
+                                    削除
+
+                                </button>
+
+                            </td>
+
+                        </tr>                        <tr>
+
+                            <td>3</td>
+
+                            <td>事務室</td>
+
+                            <td>office@example.jp</td>
+
+                            <td>
+
+                                <span class="status draft">
+
+                                    編集者
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span class="status published">
+
+                                    有効
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-button">
+
+                                    編集
+
+                                </button>
+
+                                <button class="delete-button">
+
+                                    削除
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- 管理者情報 -->
+
+            <div class="dashboard-grid">
+
+                <!-- 権限別人数 -->
+
+                <div class="content-card">
+
+                    <h2>
+
+                        📊 権限別人数
+
+                    </h2>
+
+                    <div class="recent-list">
+
+                        <div class="recent-item">
+
+                            <strong>👑 管理者</strong>
+
+                            <span>2人</span>
+
+                        </div>
+
+                        <div class="recent-item">
+
+                            <strong>✏️ 編集者</strong>
+
+                            <span>1人</span>
+
+                        </div>
+
+                        <div class="recent-item">
+
+                            <strong>👥 合計</strong>
+
+                            <span>3人</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 最近ログイン -->
+
+                <div class="content-card">
+
+                    <h2>
+
+                        🕒 最近ログインした管理者
+
+                    </h2>
+
+                    <div class="recent-list">
+
+                        <div class="recent-item">
+
+                            <div>
+
+                                <strong>
+
+                                    校長先生
+
+                                </strong>
+
+                                <br>
+
+                                <small>
+
+                                    今日 8:15
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="recent-item">
+
+                            <div>
+
+                                <strong>
+
+                                    教頭先生
+
+                                </strong>
+
+                                <br>
+
+                                <small>
+
+                                    昨日 17:30
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="recent-item">
+
+                            <div>
+
+                                <strong>
+
+                                    事務室
+
+                                </strong>
+
+                                <br>
+
+                                <small>
+
+                                    2日前 16:42
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- アカウント管理メモ -->
+
+            <div class="content-card">
+
+                <h2>
+
+                    💡 管理メモ
+
+                </h2>
+
+                <p>
+
+                    ・管理者はサイト全体を管理できます。<br>
+
+                    ・編集者はお知らせ・学校行事・ホーム管理のみ編集できます。<br>
+
+                    ・Supabase接続後はパスワード変更やログイン履歴の表示に対応予定です。
+
+                </p>
+
+            </div>            <!-- フッター -->
+
+            <footer class="dashboard-footer">
+
+                <p>
+
+                    © 2026 川中島中学校 CMS Version4
+
+                </p>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="../js/users.js"></script>
+
+</body>
+
+</html>
